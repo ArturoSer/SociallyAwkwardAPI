@@ -3,7 +3,7 @@ const { awkward, user, reaction } = require('../models');
 module.exports = {
     getAwkward(req, res){
         awkward.find()
-        .then((awkard) => res.json(awkward))
+        .then((awkward) => res.json(awkward))
         .catch((err) => res.status(500).json(err));
     },
     getOneAwkward(req, res) {
