@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {getAwkward, getOneAwkward, createAwkward, updateAwkward, deleteAwkard, addReaction, removeReaction} = require('../../controllers/awkwardController');
+const {getAwkward, getOneAwkward, createAwkward, updateAwkward, deleteAwkward, addReaction, removeReaction} = require('../../controllers/awkwardController');
 
 router.route('/')
 .get(getAwkward)
@@ -8,7 +8,7 @@ router.route('/')
 router.route('/:socialId')
 .get(getOneAwkward)
 .put(updateAwkward)
-.delete(deleteAwkard);
+.delete(deleteAwkward);
 
 router.route('/:awkwardId/reactions')
 .post(addReaction);

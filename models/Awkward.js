@@ -26,6 +26,6 @@ awkwardSchema.virtual('reactionCount').get(function(){
     return this.reactions.length;
 });
 
-const Awkard = model('Awkward', awkwardSchema);
+const Awkward = model('Awkward', awkwardSchema);
 
-module.exports = Awkard;
+module.exports = Awkward;

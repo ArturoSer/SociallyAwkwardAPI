@@ -1,4 +1,4 @@
-const { user, thought } = require('../models');
+const { user, awkward } = require('../models');
 
 module.exports = {
     getUsers(req, res) {
@@ -14,12 +14,12 @@ module.exports = {
     },
 
     getUserById(req, res) {
-        user>findOne({ _id: req.params.userId })
+        user.findOne({ _id: req.params.userId })
         .select("-__v")
         .populate('awkward friends')
         .then(userData => {
             if(!userData){ 
-                res.status(400).json({ message: "No User found with this ID"});
+                res.status(400).json({ message: "No User found with this ID" });
                 return;
             };
             res.json(userData);
@@ -55,7 +55,7 @@ module.exports = {
         .then((user) =>
         !user
         ? res.status(404).json({ message: "no user found with this ID "})
-        : thought.deleteMany({ _id: { $in: user.awkwards }})
+        : awkward.deleteMany({ _id: { $in: user.awkward }})
         )
         .then(() => res.json({ message: "User DELETED!"}))
         .catch((err) => res.status(500).json(err));

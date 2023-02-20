@@ -30,8 +30,8 @@ module.exports = {
         )
         .then((awkward) =>
         !awkward
-        ? res.status(404).json({ message: "Nothing awkard found with this ID" })
-        : res.json(awkard) 
+        ? res.status(404).json({ message: "Nothing awkward found with this ID" })
+        : res.json(awkward) 
         )
         .catch((err) => res.status(500).json(err));
     },
