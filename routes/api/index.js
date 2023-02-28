@@ -3,6 +3,6 @@ const userRoute = require('./userRoute');
 const awkwardRoute = require('./awkwardRoute');
 
 router.use('/user', userRoute);
-router.use('/social', awkwardRoute);
+router.use('/awkward', awkwardRoute);
 
 module.exports = router;

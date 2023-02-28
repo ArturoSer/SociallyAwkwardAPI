@@ -5,7 +5,7 @@ router.route('/')
 .get(getAwkward)
 .post(createAwkward);
 
-router.route('/:socialId')
+router.route('/:awkwardId')
 .get(getOneAwkward)
 .put(updateAwkward)
 .delete(deleteAwkward);
